@@ -1,0 +1,36 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+var _a;
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const path_1 = require("path");
+const hbs_1 = __importDefault(require("hbs"));
+require("./db/connection");
+const index_1 = __importDefault(require("./routes/index"));
+const bibliography_1 = __importDefault(require("./routes/bibliography"));
+const bmiCalculator_1 = __importDefault(require("./routes/bmiCalculator"));
+const stemCells_1 = __importDefault(require("./routes/stemCells"));
+const fitnessFunda_1 = __importDefault(require("./routes/fitnessFunda"));
+const contact_1 = __importDefault(require("./routes/contact"));
+const app = express_1.default();
+const port = process.env.PORT || 80;
+const staticPath = path_1.join(__dirname, "../public");
+const templatePath = path_1.join(__dirname, "../templates/views");
+const partialsPath = path_1.join(__dirname, "../templates/partials");
+app.use(express_1.default.json());
+app.use(express_1.default.urlencoded({ extended: false }));
+app.use(express_1.default.static(staticPath));
+app.set('view engine', "hbs");
+app.set("views", templatePath);
+hbs_1.default.registerPartials(partialsPath);
+app.use('/', index_1.default);
+app.use('/bibliography', bibliography_1.default);
+app.use('/bmi-calculator', bmiCalculator_1.default);
+app.use('/stem-cells', stemCells_1.default);
+app.use('/fitness-funda', fitnessFunda_1.default);
+app.use('/contact', contact_1.default);
+app.listen(port, () => {
+    console.log("Server started");
+});

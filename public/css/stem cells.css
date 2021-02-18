@@ -1,0 +1,21 @@
+
+
+body{
+	min-height: 100vh;
+	width: 100%;
+}
+.contain{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+#types{
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

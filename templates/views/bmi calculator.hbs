@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewporh=device-width, initial-scale=1.0">
+    <title>BMI Calculator | {{title}}</title>
+    {{>headerLinks}}
+    <link rel="stylesheet" href="css/bmi.css">
+    <script defer src="js/bmi.js"></script>
+</head>
+
+<body>
+    <div class="contain">
+        {{>navbar}}
+        <div class="my-container">
+            <h4>BMI Calculator</h4>
+            <div class="calcualtor">
+                <p>For accurate calculation, we need some basic info about you</p>
+                <div class="cards">
+                    <div class="card">
+                        <img src="imgs/1.png">
+                        <h3>You are</h3>
+                        <div class="gender-div">
+                            <div class="male">
+                                <label for="male">
+                                    Male
+                                </label>
+                                <input type="radio" name="gender" id="male">
+                            </div>
+                            <div class="female">
+                                <label for="female">
+                                    Female
+                                </label>
+                                <input type="radio" name="gender" id="female">
+                            </div>
+                        </div>
+                        <p>Gender</p>
+                    </div>
+                    <div class="card">
+                        <img src="imgs/2.png">
+                        <h3>How old are you?</h3>
+                        <input type="text" name="age" autocomplete="off" placeholder="21">
+                        <p>Years</p>
+                    </div>
+                    <div class="card">
+                        <img src="imgs/3.png">
+                        <h3>How tall are you?</h3>
+                        <input type="text" name="height" placeholder="170 cm" autocomplete="off" id="height">
+                        <p>Height</p>
+                    </div>
+                    <div class="card">
+                        <img src="imgs/4.png">
+                        <h3>How much do you weigh?</h3>
+                        <input type="text" name="weight" placeholder="69 kg" autocomplete="off" id="weight">
+                        <p>Weight</p>
+                    </div>
+                </div>
+                <button id="btn">Calculate your BMI</button>
+            </div>
+        </div>
+        <div class="result-div">
+            <h1>Your personal result</h1>
+            <img src="imgs/calc.png">
+            <div class="card">
+                <h2>Your personal BMI: <span id="bmi"></span></h2>
+                <h2>Your ideal BMI: 19 - 24 </h2>
+                <br>
+                <h2>Your current weight: <span id="result-weight"></span></h2>
+                <h2>Your BMI Category: <span id="type"></span></h2>
+            </div>
+        </div>
+
+        {{>footer}}
+    </div>
+</body>
+
+</html>

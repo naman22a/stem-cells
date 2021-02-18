@@ -1,0 +1,19 @@
+#message{
+    height: 180px;
+}
+
+div.container.px-5.py-24.mx-auto{
+    padding-top: 40px;
+}
+
+#contact-btn{
+    background-color: #0090ff;
+}
+
+#contact-btn:hover{
+    background-color: #0984e3;
+}
+
+a.text-indigo-500{
+    color: #0984e3;
+}
