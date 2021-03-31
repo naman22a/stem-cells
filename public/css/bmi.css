@@ -222,7 +222,7 @@ footer{
 
     @keyframes down{
         0%{
-            top: -350px;
+            top: -500px;
         }
         70%{
             top: 0px;
