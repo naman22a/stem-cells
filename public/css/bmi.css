@@ -204,3 +204,34 @@ footer{
     width: 100%;
     height: 5rem;
 }
+
+@media only screen and (max-width: 900px){
+    .my-container .calcualtor .cards{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }   
+    .my-container .calcualtor{
+        height: auto;
+    }
+
+    footer{
+        margin-top: 170px;
+    }
+
+    @keyframes down{
+        0%{
+            top: -350px;
+        }
+        70%{
+            top: 0px;
+        }
+        80%{
+            top: 40px;
+        }
+        100%{
+            top: 130px;
+        }
+    }
+}
