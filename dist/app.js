@@ -15,7 +15,7 @@ const stemCells_1 = __importDefault(require("./routes/stemCells"));
 const fitnessFunda_1 = __importDefault(require("./routes/fitnessFunda"));
 const contact_1 = __importDefault(require("./routes/contact"));
 const app = express_1.default();
-const port = process.env.PORT || 80;
+const port = (_a = process.env.PORT) !== null && _a !== void 0 ? _a : 80;
 const staticPath = path_1.join(__dirname, "../public");
 const templatePath = path_1.join(__dirname, "../templates/views");
 const partialsPath = path_1.join(__dirname, "../templates/partials");
